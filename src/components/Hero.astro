@@ -1,17 +1,118 @@
 ---
+import Image from "astro/components/Image.astro";
+import img from "../../public/images/imagentotal.png"
+import img2 from "../../public/images/imagen.png"
 
 ---
 
-	<main>
-        <section>
-
-        </section>
-    </main>
+	<section>
+        <div class="heroImage">
+            <img src={img.src} alt="imagen" class="imagen">
+            <div class="corteImagen2">
+                <img src={img2.src} alt="imagen2" class="imagen2">
+            </div>
+            <div class="textoHero"> 
+                <h1>Te ayudamos a encontrar,
+                    alquilar o vender tu propiedad</h1>
+                <div class="buscador">
+                    <button>
+                        Buscar
+                    </button>
+                    <p>Encontra tu propiedad ideal en nuestro <strong>buscador exclusivo</strong>. Descubri todas las opciones disponibles en <strong>Global Red de Inmobiliarias</strong> </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 <style>
 	section{
-        height: 95vh;
-        background-color: #f5f5f5;
+        background-color: #6e2727;
+    }
+    .heroImage {
+        position: relative;
+        padding-top: 80px;
+        display: flex;
+        
+    }
+    .imagen {
+        width: 100%;
+    }
+    .corteImagen2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 46%; 
+        z-index: 1;
+        
+
+        display: flex;
+        justify-content: end;
+        overflow: hidden;
+    }
+    .imagen2{
+        width: auto;
+        height: 100%;
+        
+    }
+
+    .textoHero{
+        
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+
+        color: white;
+        text-align: center;
+        width: 800px;
+        
+    }
+    h1{
+        padding-left: 15px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.4rem;
+        width: 57%;
+        text-align: start;
+        line-height: 1.1;
+    }
+    .buscador{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 25px;
+        padding-top: 10px;
+        width: 100%;
+        gap: 35px;
+    }
+    
+    .buscador button{
+        width: 40%;
+        height: 47px;
+
+        padding-right: 40px;
+        border: none;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        background-image: linear-gradient(to right, #a81820, #a81820, #590c11);
+        color: white;
+        text-align: end;
+        font-family: 'RalewayB', sans-serif;
+        font-size: 1.4rem;
+    }
+    .buscador p{
+        margin: 0px;
+        width: 30%;
+        text-align: start;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1rem;
+        line-height: 1.4;
     }
 </style>

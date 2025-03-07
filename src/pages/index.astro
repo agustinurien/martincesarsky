@@ -1,11 +1,13 @@
 ---
 import Hero from '../components/Hero.astro';
+import Quienes from '../components/Quienes.astro';
 import Layout from '../layouts/Layout.astro';
 
 ---
 
 <Layout>
 	<Hero />
+	<Quienes />
 </Layout>
 
 <style is:global>
@@ -13,6 +15,13 @@ import Layout from '../layouts/Layout.astro';
 		font-family: 'Raleway';
 		src: url('/public/fuentes/Raleway-Regular.ttf') format('truetype');
 		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+}
+	@font-face {
+		font-family: 'RalewayB';
+		src: url('/public/fuentes/Raleway-Bold.ttf') format('truetype');
+		font-weight: 800;
 		font-style: normal;
 		font-display: swap;
 }
