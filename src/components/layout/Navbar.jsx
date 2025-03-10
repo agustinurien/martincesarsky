@@ -1,7 +1,7 @@
 
 import './navbar.css';
 import { useState } from "react";
-import logo from '../../../public/images/logo.png'
+import logo from '../../../public/images/logo.jpg'
 
 const Navbar = () => {
     const [linkSelected, setLinkSelected] = useState('home');

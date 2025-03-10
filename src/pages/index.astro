@@ -1,16 +1,20 @@
 ---
+import Equipo from '../components/Equipo.astro';
 import Hero from '../components/Hero.astro';
 import Quienes from '../components/Quienes.astro';
 import Layout from '../layouts/Layout.astro';
-
+import Contact from '../components/contact/Contact';
 ---
 
 <Layout>
 	<Hero />
 	<Quienes />
+	<Equipo />
+	<Contact client:load/>
 </Layout>
 
 <style is:global>
+	
 	@font-face {
 		font-family: 'Raleway';
 		src: url('/public/fuentes/Raleway-Regular.ttf') format('truetype');
