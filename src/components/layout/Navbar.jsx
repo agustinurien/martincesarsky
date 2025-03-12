@@ -1,9 +1,23 @@
 import "./navbar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../../../public/images/logo.jpg";
 
 const Navbar = () => {
   const [linkSelected, setLinkSelected] = useState("home");
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const links = [
     { id: "home", label: "Home", href: "/" },
@@ -18,7 +32,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" style={{ zIndex: isScrolled && 1000 }}>
       <div className="logoContainer">
         <img src={logo.src} height={50} width={50} alt="Logo de la empresa" />
       </div>
