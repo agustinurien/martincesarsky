@@ -2,15 +2,19 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #ffffff;
+  background-color: white;
   color: #333333;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 100px;
-  z-index: 1000;
+  z-index: 1;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar.scrolled {
+  animation: fadeMask 0.5s ease-in-out forwards;
+  z-index: 1000;
 }
 
 h1 {
@@ -71,4 +75,46 @@ h1 {
   z-index: 1;
   font-size: 1.2rem;
   font-family: "Manrope", sans-serif;
+}
+
+@media screen and (max-width: 1500px) {
+}
+@media screen and (max-width: 930px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    color: #333333;
+    height: 60px;
+    justify-content: space-between;
+    gap: 0px;
+  }
+  .navLinksContainer {
+    height: 100%;
+    width: 70%;
+    display: flex;
+  }
+
+  .navLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px;
+    margin: 0px;
+    gap: 0px;
+  }
+  .navLinks li a {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  .logoContainer {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 710px) {
 }

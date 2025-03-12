@@ -35,7 +35,7 @@ import equipo from "../../public/images/equipo.jpeg"
         justify-content: start;
         align-items: center;
         
-        width: 35%;
+        width: 40%;
         
     }
     .equipoImageContainer{
@@ -88,5 +88,66 @@ import equipo from "../../public/images/equipo.jpeg"
         width: 55%;
         font-family: 'Manrope', sans-serif;
         margin-bottom: 0px;
+    }
+
+    @media screen and (max-width: 1500px){
+        main{
+        height: 55vh;
+        }
+        .equipoContainer{
+        width: 55%;
+        
+    }
+        .textContainer h2{
+            width: 40%;
+            font-size: 3.5rem;
+        }
+        .textContainer p{
+            font-size: 0.9rem;
+        }
+}
+
+    @media screen and (max-width: 930px){
+        main{
+        height: 50vh;
+        
+    }
+        .equipoContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 100%;
+        width: 65%;
+        
+    }
+    .textContainer h2{
+        line-height: 1.1;
+        margin: 0px;
+        width: 40%;
+        font-size: 3rem;
+        font-family: 'ManropeB', sans-serif;
+        padding-bottom: 20px;
+        color: #333;
+    }
+    .textContainer::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 20%;
+        height: 30px;
+        
+        border-bottom: 5px solid  #a71821;
+        
+    }
+    .textContainer p{
+        position: relative;
+        font-size: 0.7rem;
+        width: 50%;
+        font-family: 'Manrope', sans-serif;
+        margin-bottom: 0px;
+    }
+        
+        
     }
 </style>

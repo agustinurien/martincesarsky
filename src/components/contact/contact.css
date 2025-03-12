@@ -8,7 +8,7 @@
 }
 .contact {
   height: fit-content;
-  width: 35%;
+  width: 40%;
 }
 .contact form {
   display: flex;
@@ -60,4 +60,28 @@ h2 {
   font-size: 3.8rem;
   font-family: "ManropeB", sans-serif;
   color: #333;
+}
+
+@media screen and (max-width: 1500px) {
+  .contact {
+    width: 55%;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .contact {
+    width: 65%;
+  }
+  .contact form input {
+    width: 100%;
+  }
+  .contact button {
+    width: 30%;
+  }
+  h2 {
+    font-size: 3rem;
+  }
 }
