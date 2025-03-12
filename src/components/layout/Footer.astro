@@ -6,8 +6,8 @@ import { IoLocationSharp } from "react-icons/io5";
 ---
 <section>
     <div class="socials">
-        <span><FaFacebookF/></span>
-        <span class="instagramLogo"><FaInstagram/></span>
+        <a href="https://www.facebook.com/martincesarskypropiedades" target="_blank"><FaFacebookF/></a>
+        <a href="https://www.instagram.com/martincesarskypropiedades/" target="_blank" class="instagramLogo"><FaInstagram /></a>
     </div>
     <div class="dataContainer">
         <div> 
@@ -30,15 +30,16 @@ import { IoLocationSharp } from "react-icons/io5";
             <span >
                 <IoLocationSharp /> 
             </span>
-            <p class="direction">
-                Suc. C.A.B.A: Ramallo
-                2300, C.A.B.A.
-                <br>
-                <br>
-                Suc. San Isidro (Vte.
-                López a Tigre): Rivadavia
-                154 Of. 603
-            </p>
+            <div class="ubicacionContainer">
+                <a href="https://maps.app.goo.gl/uGdhM7DeHQ2qpWGn6" class="direction">
+                    Suc. C.A.B.A: Ramallo
+                    2300, C.A.B.A.
+                </a>
+                <a href="https://maps.app.goo.gl/Ri1wwTRBmWWyExW18" class="direction">
+                    Suc. San Isidro 
+                    Ituzaingó 608
+                </a>
+            </div>
         </div>
     </div>
     <div class="copy">
@@ -64,7 +65,7 @@ import { IoLocationSharp } from "react-icons/io5";
         font-size: 35px;
         padding: 30px 0px;
     }
-    .socials span{
+    .socials a{
         display: flex;
         color: white;
         display: flex;
@@ -110,14 +111,22 @@ import { IoLocationSharp } from "react-icons/io5";
     }
     .dataContainer .directionContainer{
         align-items: flex-start;
-        
-        
+        text-decoration: none;
+        margin-top: 10px;
     }
-    
+    .ubicacionContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+    }
     .direction{
         margin: 0px;
         width: 170px;
         font-family: 'Manrope', sans-serif;
+        color: white;
+        text-decoration: none;
     }
     .copy{
         display: flex;

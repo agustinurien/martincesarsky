@@ -32,7 +32,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar" style={{ zIndex: isScrolled && 1000 }}>
+    <nav className={isScrolled ? "navbar scrolled" : "navbar"}>
       <div className="logoContainer">
         <img src={logo.src} height={50} width={50} alt="Logo de la empresa" />
       </div>
