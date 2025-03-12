@@ -2,9 +2,9 @@
 import martin from "../../public/images/martin.jpeg"
 ---
 
-<main>
+<main id="quienes">
     <div class="quienesSomosContainer">
-        <div class="martinImageContainer" id="about">
+        <div class="martinImageContainer" >
             <img src={martin.src} alt="martin" class="martinImage">
         </div>
         <div class="textContainer">
@@ -30,7 +30,8 @@ import martin from "../../public/images/martin.jpeg"
 
 <style>
     main{
-        margin-top: 80px;
+        scroll-margin-top: 100px;
+        padding-top: 80px;
         height: 80vh;
         display: flex;
         justify-content: center;
@@ -70,13 +71,13 @@ import martin from "../../public/images/martin.jpeg"
         
     }
     .textContainer h2{
-        
+        line-height: 1.1;
         margin: 0px;
         width: 50%;
         font-size: 3.8rem;
-        font-family: 'RalewayB', sans-serif;
+        font-family: 'ManropeB', sans-serif;
         padding-bottom: 20px;
-        
+        color: #333;
     }
     .textContainer::before{
         content: "";
@@ -93,7 +94,7 @@ import martin from "../../public/images/martin.jpeg"
         position: relative;
         font-size: 1rem;
         width: 50%;
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Manrope', sans-serif;
         margin-bottom: 0px;
     }
 </style>

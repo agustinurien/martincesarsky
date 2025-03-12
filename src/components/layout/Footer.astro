@@ -1,39 +1,132 @@
 ---
 import { IoIosMail } from "react-icons/io";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaInstagram, FaFacebookF} from "react-icons/fa";
+
 import { IoLocationSharp } from "react-icons/io5";
 ---
 <section>
-    <div>
-        <span> <IoIosMail/> martin@martincesarsky.com.ar</span>
-        <span> <FaPhoneAlt/> 011 4704-6925</span>
-        <span> <IoLocationSharp/> Suc. C.A.B.A: Ramallo
-            2300, C.A.B.A.
-            <br>
-            <br>
-            Suc. San Isidro (Vte.
-            López a Tigre): Rivadavia
-            154 Of. 603</span>
+    <div class="socials">
+        <span><FaFacebookF/></span>
+        <span class="instagramLogo"><FaInstagram/></span>
+    </div>
+    <div class="dataContainer">
+        <div> 
+            <span>
+                <IoIosMail/> 
+            </span>
+            <p>
+                martin@martincesarsky.com.ar
+            </p>
         </div>
+        <div> 
+            <span>
+                <FaPhoneAlt/> 
+            </span>
+            <p class="numero">
+                011 4704-6925
+            </p>
+        </div>
+        <div class="directionContainer"> 
+            <span >
+                <IoLocationSharp /> 
+            </span>
+            <p class="direction">
+                Suc. C.A.B.A: Ramallo
+                2300, C.A.B.A.
+                <br>
+                <br>
+                Suc. San Isidro (Vte.
+                López a Tigre): Rivadavia
+                154 Of. 603
+            </p>
+        </div>
+    </div>
+    <div class="copy">
+        <span>© 2025 Martin Cesarsky Propiedades.</span>
+        <span>Software Inmobiliario - Tokko Broker</span>
+    </div>
 </section>
 
 <style>
     section{
         background-color: #333;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 40vh;
+        margin-top: 80px;
+        font-family: 'ManropeB', sans-serif;
     }
-    div {
+    .socials{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 35px;
+        padding: 30px 0px;
+    }
+    .socials span{
+        display: flex;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid white;
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        color: #ffffff;
+        font-size: 22px;
+    }
+    .dataContainer {
+        border-top: 1px solid rgba(255, 255, 255, 0.574);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.574);
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        width: 50%;
-        margin-top: 50px;
-        background-color: rgb(34, 42, 42);
+        width: 34%;
         color: white;
         padding: 1rem;
+        padding-bottom: 30px;
+        gap: 20px;
+
+    }
+    .dataContainer div{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 1.1rem;
+    }
+    .dataContainer div span{
+        background-color: rgb(255, 255, 255);
+        height: 35px;
+        width: 35px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        color: #333;
         
     }
+    .dataContainer .directionContainer{
+        align-items: flex-start;
+        
+        
+    }
+    
+    .direction{
+        margin: 0px;
+        width: 170px;
+        font-family: 'Manrope', sans-serif;
+    }
+    .copy{
+        display: flex;
+        justify-content: space-between;
+        width: 35%;
+        padding: 35px 0px;
+        font-size: 0.9rem;
+        color: white;
+        font-family: 'Manrope', sans-serif;
+    }
+
 </style>
