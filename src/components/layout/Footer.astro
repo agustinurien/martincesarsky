@@ -138,6 +138,13 @@ import { IoLocationSharp } from "react-icons/io5";
         font-family: 'Manrope', sans-serif;
         text-align: center;
     }
+    @media screen and (max-width: 1500px){
+        .dataContainer{
+            width: 50%;
+        }
+        .copy{
+            width: 50%;
+    }
     @media screen and (max-width: 930px){
         .dataContainer{
             width: 90%;
@@ -154,6 +161,26 @@ import { IoLocationSharp } from "react-icons/io5";
             width: 100%;
             justify-content: space-between;
             flex-direction: row;
+        }
+    }
+    @media screen and (max-width: 710px) {
+        .socials{
+            padding: 15px 0px;
+        }
+        .dataContainer div{
+        font-size: 12px;
+        
+        }
+        .directionContainer{
+            justify-content: flex-start;
+        }
+        .ubicacionContainer{
+            width: fit-content;
+            flex-direction: column;
+        }
+        .copy{
+            padding: 20px 0px;
+            font-size: 0.5rem;
         }
     }
 </style>

@@ -44,7 +44,7 @@ import { IoSearch } from "react-icons/io5";
         top: 0;
         left: 0;
         height: 100%;
-        width: 46%; 
+        width: 42%; 
         z-index: 1;
 
         display: flex;
@@ -70,7 +70,6 @@ import { IoSearch } from "react-icons/io5";
     }
     
     .textoHero{
-        
         padding-top: 20px;
         display: flex;
         flex-direction: column;
@@ -146,6 +145,36 @@ import { IoSearch } from "react-icons/io5";
     .buscador{
         padding: 0px;
         width: 100%;
+    }
+    @media screen and (max-width: 710px) {
+        .textoHero{
+            padding: 0px;
+        }
+        .heroImage {
+        position: relative;
+
+        height: 70vh;
+        display: flex;
+        
+    }
+        h1{
+            width: 70%;
+            padding-left: 0;
+            font-size: 2rem;
+        }
+        .buscador{
+            gap: 15px;
+        }
+        .buscador a{
+            width: 30%;
+            font-size: 1rem;
+            padding-right: 15px;
+            height: 40px;
+        }
+        .buscador p{
+            width: 50%;
+            font-size: 0.9rem;
+        }
     }
 }
 </style>

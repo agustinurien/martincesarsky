@@ -43,7 +43,6 @@ import martin from "../../public/images/martin.jpeg"
         align-items: center;
         height: 100%;
         width: 40%;
-        
     }
     .martinImageContainer{
         width: 100%;
@@ -155,5 +154,33 @@ import martin from "../../public/images/martin.jpeg"
     }
         
         
+    }
+    @media screen and (max-width: 710px) {
+        .quienesSomosContainer{
+        width: 80%;
+        
+    }
+        .textContainer{
+            flex-direction: column;
+            padding-top: 15px;
+            padding-bottom: 20px;
+        }
+        .textContainer h2{
+            width: 100%;
+            font-size: 2rem;
+            text-align: center;
+            padding: 0px;
+        }
+        .textContainer p{
+            width: 100%;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        .textContainer::before{
+            width: 100%;
+            border-bottom: 3px solid #a71822;
+        
+    }
     }
 </style>

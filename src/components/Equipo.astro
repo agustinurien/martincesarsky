@@ -25,7 +25,7 @@ import equipo from "../../public/images/equipo.jpeg"
     main{
         margin-top: 0px;
         scroll-margin-top: 130px;
-        height: 75vh;
+        height: 80vh;
         display: flex;
         justify-content: center;
     }
@@ -34,9 +34,8 @@ import equipo from "../../public/images/equipo.jpeg"
         flex-direction: column;
         justify-content: start;
         align-items: center;
-        
         width: 40%;
-        
+        margin-top: 40px;
     }
     .equipoImageContainer{
         width: 100%;
@@ -78,7 +77,6 @@ import equipo from "../../public/images/equipo.jpeg"
         bottom: 0;
         width: 20%;
         height: 30px;
-        
         border-bottom: 5px solid  #a71821;
         
     }
@@ -91,11 +89,10 @@ import equipo from "../../public/images/equipo.jpeg"
     }
 
     @media screen and (max-width: 1500px){
-        main{
-        height: 55vh;
-        }
+        
         .equipoContainer{
         width: 55%;
+        margin-top: 0px;
         
     }
         .textContainer h2{
@@ -136,7 +133,6 @@ import equipo from "../../public/images/equipo.jpeg"
         bottom: 0;
         width: 20%;
         height: 30px;
-        
         border-bottom: 5px solid  #a71821;
         
     }
@@ -147,7 +143,33 @@ import equipo from "../../public/images/equipo.jpeg"
         font-family: 'Manrope', sans-serif;
         margin-bottom: 0px;
     }
+    }
         
+    @media screen and (max-width: 710px) {
+        .equipoContainer{
+        width: 80%;
+        margin-top: 20px;
+    }
+        .textContainer{
+            padding-top: 15px;
+            flex-direction: column;
+            padding-bottom: 20px;
+        }
+        .textContainer h2{
+            width: 100%;
+            font-size: 2rem;
+            text-align: center;
+            padding: 0px;
+        }
+        .textContainer p{
+            width: 100%;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+        .textContainer::before{
+            width: 100%;
+            border-bottom: 3px solid #a71822;
         
+    }
     }
 </style>
