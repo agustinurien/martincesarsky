@@ -1,7 +1,7 @@
 import "./navbar.css";
 import { useState, useEffect } from "react";
 import logo from "../../../public/images/logo.jpg";
-import logo2 from "../../../public/images/logo3.png";
+import logo2 from "../../../public/images/logo3.jpg";
 
 const Navbar = () => {
   const [linkSelected, setLinkSelected] = useState("home");
@@ -48,7 +48,12 @@ const Navbar = () => {
   return (
     <nav className={isScrolled ? "navbar scrolled" : "navbar"}>
       <div className="logoContainer">
-        <img src={currentLogo.src} height={50} width={50} alt="Logo de la empresa" />
+        <img
+          src={currentLogo.src}
+          height={50}
+          width={50}
+          alt="Logo de la empresa"
+        />
       </div>
 
       <div className="navLinksContainer">

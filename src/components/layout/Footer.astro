@@ -15,7 +15,7 @@ import { IoLocationSharp } from "react-icons/io5";
                 <IoIosMail/> 
             </span>
             <p>
-                martin@martincesarsky.com.ar
+                info@martincesarsky.com.ar
             </p>
         </div>
         <div> 
@@ -27,17 +27,22 @@ import { IoLocationSharp } from "react-icons/io5";
             </p>
         </div>
         <div class="directionContainer"> 
-            <span >
-                <IoLocationSharp /> 
-            </span>
             <div class="ubicacionContainer">
+                <span >
+                    <IoLocationSharp /> 
+                </span>
                 <a href="https://maps.app.goo.gl/uGdhM7DeHQ2qpWGn6" class="direction">
                     Suc. C.A.B.A: Ramallo
-                    2300, C.A.B.A.
+                    2300.
                 </a>
+            </div>
+            <div class="ubicacionContainer">
+                <span >
+                    <IoLocationSharp /> 
+                </span>
                 <a href="https://maps.app.goo.gl/Ri1wwTRBmWWyExW18" class="direction">
-                    Suc. San Isidro 
-                    Ituzaingó 608
+                    Suc. San Isidro:
+                    Ituzaingó 608.
                 </a>
             </div>
         </div>
@@ -113,10 +118,13 @@ import { IoLocationSharp } from "react-icons/io5";
         align-items: flex-start;
         text-decoration: none;
         margin-top: 10px;
+        
+        display: flex;
+        flex-direction: column ;
     }
     .ubicacionContainer{
         display: flex;
-        flex-direction: column;
+        flex-direction: row; 
         gap: 10px;
 
 
@@ -145,6 +153,7 @@ import { IoLocationSharp } from "react-icons/io5";
         .copy{
             width: 50%;
     }
+}
     @media screen and (max-width: 930px){
         .dataContainer{
             width: 90%;
@@ -153,13 +162,10 @@ import { IoLocationSharp } from "react-icons/io5";
         .copy{
             width: 90%;
         }
-        .directionContainer{
-            justify-content: space-between;
-            
-        }
+        
         .ubicacionContainer{
             width: 100%;
-            justify-content: space-between;
+            
             flex-direction: row;
         }
     }
@@ -176,7 +182,7 @@ import { IoLocationSharp } from "react-icons/io5";
         }
         .ubicacionContainer{
             width: fit-content;
-            flex-direction: column;
+            
         }
         .copy{
             padding: 20px 0px;
