@@ -1,14 +1,19 @@
 ---
 import Image from "astro/components/Image.astro";
-import img from "../../public/images/imagentotal.jpg"
+
+import img from "../../public/images/imagentotal.jpg";
 import img2 from "../../public/images/imagen.png"
 import { IoSearch } from "react-icons/io5";
+
 
 ---
 
 	<section>
         <div class="heroImage">
-            <img src={img.src} alt="imagen" class="imagen" >
+            <div class="fondoNegro">
+
+            </div>
+            <img src={img.src} alt="imagen" class="imagen"></img>
             <div class="corteImagen2">
                 <img src={img2.src} alt="imagen2" class="imagen2">
             </div>
@@ -23,26 +28,55 @@ import { IoSearch } from "react-icons/io5";
         </div>
     </section>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const heroImage = document.querySelector(".heroImage .imagen");
+        
+            document.addEventListener("mousemove", (e) => {
+                const { innerWidth, innerHeight } = window;
+                const x = (e.clientX / innerWidth - 0.5) * 30; // Ajusta el rango de movimiento
+                const y = (e.clientY / innerHeight - 0.5) * 30;
+        
+                heroImage.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+        </script>
+
 
 <style>
     .heroImage {
         position: relative;
         height: 80vh;
         display: flex;
-        
+        overflow: hidden;
     }
+
     .imagen {
         width: 100%;
         height: auto;
         object-fit: cover;
-    }
+}
+.fondoNegro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #000000, #0000) ;
+    z-index: 1;
+    
+}
+
+
+
+    
     .corteImagen2{
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 46%; 
-        z-index: 1;
+        z-index: 2;
 
         display: flex;
         justify-content: end;
@@ -54,8 +88,6 @@ import { IoSearch } from "react-icons/io5";
     @keyframes moveIn2 {
     0% {
         transform: translateX(-600px);
-        
-        
     }
     100% {
         
@@ -67,16 +99,7 @@ import { IoSearch } from "react-icons/io5";
         width: auto;
         height: 100%;
     }
-    .heroImage::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        background-image: linear-gradient(to right, #000000, #0000007d, #590c1100);
-    }
+    
     
     .textoHero{
         padding-top: 20px;
@@ -94,9 +117,11 @@ import { IoSearch } from "react-icons/io5";
         color: white;
         text-align: center;
         width: 800px;
+        z-index: 1;
         
     }
     h1{
+        
         padding-left: 15px;
         font-family: 'Manrope', sans-serif;
         font-size: 2.4rem;
@@ -104,6 +129,7 @@ import { IoSearch } from "react-icons/io5";
         text-align: start;
         line-height: 1.1;
         animation: appear 1s ease-out forwards;
+        
     }
     @keyframes appear {
   0% {
@@ -144,7 +170,10 @@ import { IoSearch } from "react-icons/io5";
         list-style: none;
         text-decoration: none;
         gap: 7px;
+        opacity: 0;
+        transform: translateX(-600px);
         animation: moveIn 1s ease-out forwards;
+        animation-delay: 0.1s;
     }
     @keyframes moveIn {
   0% {
@@ -152,7 +181,7 @@ import { IoSearch } from "react-icons/io5";
     opacity: 0;
   }
   100% {
-    
+    transform: translateX(0px);
     opacity: 1;
   }
 }
@@ -164,7 +193,7 @@ import { IoSearch } from "react-icons/io5";
         font-size: 1rem;
         line-height: 1.4;
         opacity: 0; /* Asegura que inicia invisible */
-    animation: appearP 1s ease-out forwards;
+    animation: appearP 0.5s ease-out forwards;
     animation-delay: 0.8s; /* Retrasa el inicio de la animación */
 }
 
@@ -185,7 +214,7 @@ import { IoSearch } from "react-icons/io5";
     }
     .corteImagen2{
         animation: none;
-        
+
     }
     h1{
         width: 60%;

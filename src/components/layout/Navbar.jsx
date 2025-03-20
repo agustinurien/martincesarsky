@@ -9,8 +9,7 @@ const Navbar = () => {
   const [currentLogo, setCurrentLogo] = useState(logo); // Estado para el logo
 
   const sendToLink = () => {
-    window.location.href =
-      "https://www.zonaprop.com.ar/inmobiliarias/globlal-red-de-inmobiliarias_17020921-inmuebles.html";
+    window.location.href = "/";
   };
   useEffect(() => {
     const handleScroll = () => {
