@@ -60,6 +60,7 @@ h1 {
   align-items: center;
   padding: 0px 8px;
 }
+
 .imgContainer {
   position: absolute;
   top: 0;
@@ -75,6 +76,40 @@ h1 {
   z-index: 1;
   font-size: 1.2rem;
   font-family: "Manrope", sans-serif;
+  opacity: 0;
+  transform: translateX(-400px);
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+.navLinks li a:hover {
+  font-weight: bolder;
+}
+
+/* Retrasar el inicio del movimiento de cada enlace */
+.navLinks li:nth-child(5) a {
+  animation-delay: 0.1s;
+}
+.navLinks li:nth-child(4) a {
+  animation-delay: 0.2s; /* Se mueve después de que el primero termine */
+}
+.navLinks li:nth-child(3) a {
+  animation-delay: 0.3s; /* Se mueve después del segundo */
+}
+.navLinks li:nth-child(2) a {
+  animation-delay: 0.4s;
+}
+.navLinks li:nth-child(1) a {
+  animation-delay: 0.5s;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -86,6 +121,9 @@ h1 {
   }
   .navLinks li a {
     text-align: center;
+    animation: none;
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 @media screen and (max-width: 930px) {
