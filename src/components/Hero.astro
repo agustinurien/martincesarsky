@@ -34,9 +34,8 @@ import { IoSearch } from "react-icons/io5";
         
             document.addEventListener("mousemove", (e) => {
                 const { innerWidth, innerHeight } = window;
-                const x = (e.clientX / innerWidth - 0.5) * 25; // Ajusta el rango de movimiento
-                const y = (e.clientY / innerHeight - 0.5) * 25;
-        
+                const x = (e.clientX / innerWidth - 0.3) * 25; // Ajusta el rango de movimiento
+                const y = (e.clientY / innerHeight - 0.3) * 25;
                 heroImage.style.transform = `translate(${x}px, ${y}px)`;
             });
         });
@@ -50,12 +49,13 @@ import { IoSearch } from "react-icons/io5";
         display: flex;
         align-items: center;
         overflow: hidden;
+        
     }
 
     .imagen {
-
-        width: 120%;
-        height: 120%;
+        margin-left:100px;
+        width: 100%;
+        
         object-fit: cover;
 }
 .fondoNegro{
@@ -68,10 +68,6 @@ import { IoSearch } from "react-icons/io5";
     z-index: 1;
     
 }
-
-
-
-    
     .corteImagen2{
         position: absolute;
         top: 0;
@@ -85,7 +81,8 @@ import { IoSearch } from "react-icons/io5";
         align-items: start;
         overflow: hidden;
         pointer-events: none;
-        animation: moveIn2 0.5s ease-out forwards;
+        
+        
     }
     @keyframes moveIn2 {
     0% {
@@ -100,6 +97,7 @@ import { IoSearch } from "react-icons/io5";
     .imagen2{
         width: auto;
         height: 100%;
+        animation: moveIn2 0.5s ease-out forwards;
     }
     
     
