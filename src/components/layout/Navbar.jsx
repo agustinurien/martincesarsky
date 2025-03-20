@@ -8,6 +8,10 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentLogo, setCurrentLogo] = useState(logo); // Estado para el logo
 
+  const sendToLink = () => {
+    window.location.href =
+      "https://www.zonaprop.com.ar/inmobiliarias/globlal-red-de-inmobiliarias_17020921-inmuebles.html";
+  };
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -40,7 +44,7 @@ const Navbar = () => {
     {
       id: "propiedades",
       label: "Propiedades",
-      href: "https://www.globalreddeinmobiliarias.com/",
+      href: "https://www.zonaprop.com.ar/inmobiliarias/globlal-red-de-inmobiliarias_17020921-inmuebles.html",
     },
     { id: "contacto", label: "Contacto", href: "#contacto" },
   ];
@@ -49,6 +53,7 @@ const Navbar = () => {
     <nav className={isScrolled ? "navbar scrolled" : "navbar"}>
       <div className="logoContainer">
         <img
+          onClick={() => sendToLink()}
           src={currentLogo.src}
           height={50}
           width={50}
@@ -65,6 +70,7 @@ const Navbar = () => {
                 href={link.href}
                 onClick={() => setLinkSelected(link.id)}
                 style={{ color: linkSelected === link.id && "white" }}
+                {...(link.id === "propiedades" && { target: "_blank" })}
               >
                 {link.label}
               </a>

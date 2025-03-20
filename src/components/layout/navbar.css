@@ -25,6 +25,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .logoContainer img {
   width: 90%;
