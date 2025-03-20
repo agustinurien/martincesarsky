@@ -30,12 +30,12 @@ import { IoSearch } from "react-icons/io5";
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const heroImage = document.querySelector(".heroImage .imagen");
+            const heroImage = document.querySelector(".imagen");
         
             document.addEventListener("mousemove", (e) => {
                 const { innerWidth, innerHeight } = window;
-                const x = (e.clientX / innerWidth - 0.5) * 30; // Ajusta el rango de movimiento
-                const y = (e.clientY / innerHeight - 0.5) * 30;
+                const x = (e.clientX / innerWidth - 0.5) * 25; // Ajusta el rango de movimiento
+                const y = (e.clientY / innerHeight - 0.5) * 25;
         
                 heroImage.style.transform = `translate(${x}px, ${y}px)`;
             });
@@ -48,12 +48,14 @@ import { IoSearch } from "react-icons/io5";
         position: relative;
         height: 80vh;
         display: flex;
+        align-items: center;
         overflow: hidden;
     }
 
     .imagen {
-        width: 100%;
-        height: auto;
+
+        width: 120%;
+        height: 120%;
         object-fit: cover;
 }
 .fondoNegro{
