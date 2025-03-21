@@ -113,8 +113,12 @@ h1 {
 }
 
 @media screen and (max-width: 1500px) {
+  .navbar {
+    justify-content: flex-end;
+  }
   .navLinksContainer {
-    width: 62%;
+    width: 60%;
+    margin-right: 20px;
   }
   .logoContainer {
     justify-content: flex-end;
@@ -140,6 +144,7 @@ h1 {
     height: 100%;
     width: 70%;
     display: flex;
+    margin-right: 0px;
   }
 
   .navLinks {
