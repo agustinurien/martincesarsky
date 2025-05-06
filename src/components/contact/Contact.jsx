@@ -20,6 +20,7 @@ const Contact = () => {
       from_email: form.email.value,
       message: form.message.value,
       to_email: sendEmail,
+      reply_to: form.email.value,
     };
 
     const serviceID = "service_8orziyc";
