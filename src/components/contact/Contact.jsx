@@ -11,7 +11,7 @@ const Contact = () => {
     if (form.where.value === "GBA") {
       sendEmail = "zonanorte@martincesarsky.com.ar";
     } else if (form.where.value === "CABA") {
-      sendEmail = "info@martincesarksy.com.ar";
+      sendEmail = "info@martincesarsky.com.ar";
     }
 
     const templateParams = {
@@ -20,6 +20,7 @@ const Contact = () => {
       from_email: form.email.value,
       message: form.message.value,
       to_email: sendEmail,
+      reply_to: form.email.value,
     };
 
     const serviceID = "service_8orziyc";
